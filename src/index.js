@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './components/reducers'
+import TryingForms from './App'
 
-const store = createStore();
+const store = createStore(rootReducer);
 
-ReactDOM.render(<Provider store={store}> </Provider>, document.getElementById('root'));
+render(
+        <TryingForms />,
 
-serviceWorker.unregister();
+    document.getElementById('root')
+)
