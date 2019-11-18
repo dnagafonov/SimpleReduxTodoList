@@ -13,7 +13,7 @@ const Link = ({active, children, onClick}) => (
 // eslint-disable-next-line react/no-typos
 Link.PropTypes = {
     active: PropTypes.bool.isRequired,
-    children: PropTypes.none.isRequired,
+    children: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
 }
 
